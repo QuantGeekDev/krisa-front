@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const KrisaMonitorStyled = styled.div`
+  z-index: 0;
   .monitor {
     &__screen {
       display: flex;
