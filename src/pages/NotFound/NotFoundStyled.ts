@@ -7,6 +7,7 @@ const NotFoundStyled = styled.div`
     }
     &__message {
       font-style: italic;
+      color: #fff;
     }
   }
 `;

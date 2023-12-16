@@ -8,7 +8,7 @@ const AppStyled = styled.section`
   gap: 25px;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #1d1d1b;
   & h1 {
     color: #fff;
   }
