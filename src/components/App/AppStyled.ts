@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 const AppStyled = styled.section`
   display: flex;
-  margin-top: 45px;
+  height: 100%;
+  min-height: 100vh;
+
   flex-direction: column;
   gap: 25px;
   justify-content: center;
