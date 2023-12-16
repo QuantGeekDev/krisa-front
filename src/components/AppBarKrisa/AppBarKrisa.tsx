@@ -15,12 +15,12 @@ const AppBarKrisa = (): React.ReactElement => {
 
   return (
     <AppBar>
-      <Toolbar style={{ justifyContent: "space-between" }}>
+      <Toolbar style={{ justifyContent: "space-between", height: "68px" }}>
         <div style={{ position: "relative", display: "inline-block" }}>
           <Button
             onClick={() => setOpen(!open)}
             active={open}
-            style={{ fontWeight: "bold" }}
+            style={{ fontWeight: "bold", width: "150px", fontSize: "1.5rem" }}
           >
             <img
               src="./krisaLogo.png"
@@ -35,10 +35,11 @@ const AppBarKrisa = (): React.ReactElement => {
                 position: "absolute",
                 left: "0",
                 top: "100%",
+                width: "150px",
               }}
               onClick={() => setOpen(false)}
             >
-              <MenuListItem>
+              <MenuListItem style={{ fontSize: "1.5rem" }}>
                 <NavLink to={"/home"}>
                   <i role="img" aria-label="🐀">
                     🐀
@@ -46,7 +47,7 @@ const AppBarKrisa = (): React.ReactElement => {
                   Krisa
                 </NavLink>
               </MenuListItem>
-              <MenuListItem>
+              <MenuListItem style={{ fontSize: "1.5rem" }}>
                 <NavLink to={"/lair"}>
                   <i role="img" aria-label="🏯">
                     🏯
