@@ -7,7 +7,7 @@ const KrisaMonitor = (): React.ReactElement => (
       <img
         className="monitor__screen"
         src="./krisa.jpg"
-        alt="art of a krisa"
+        alt="original krisa"
         height="120"
         width="170"
       />
