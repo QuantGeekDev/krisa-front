@@ -19,7 +19,9 @@ ${styleReset}
   }
   body, input, select, textarea {
     font-family: 'ms_sans_serif';
+    color: "#fff"
   }
+
 
   h1{
     font-size: 2rem;

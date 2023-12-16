@@ -16,7 +16,7 @@ const NotificationWindowStyled = styled.div`
       background-color: #000;
     }
 
-    &__sexo-ahora {
+    &__bold {
       color: #000;
       font-weight: 900;
     }
