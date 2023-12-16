@@ -7,10 +7,6 @@ const HomepageStyled = styled.section`
   align-items: center;
   gap: 15px;
   padding: 10px;
-
-  h1 {
-    font-size: 2rem;
-  }
 `;
 
 export default HomepageStyled;

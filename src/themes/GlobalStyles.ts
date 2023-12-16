@@ -20,6 +20,10 @@ ${styleReset}
   body, input, select, textarea {
     font-family: 'ms_sans_serif';
   }
+
+  h1{
+    font-size: 2rem;
+  }
 `;
 
 export default GlobalStyles;

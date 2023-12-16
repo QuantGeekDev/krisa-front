@@ -9,6 +9,7 @@ import {
   Toolbar,
 } from "react95";
 import AppBarKrisaStyled from "./AppBarKrisaStyled";
+import { NavLink } from "react-router-dom";
 
 const AppBarKrisa = (): React.ReactElement => {
   const [open, setOpen] = useState(false);
@@ -40,16 +41,20 @@ const AppBarKrisa = (): React.ReactElement => {
                 onClick={() => setOpen(false)}
               >
                 <MenuListItem>
-                  <i role="img" aria-label="🐀">
-                    🐀
-                  </i>
-                  Krisa
+                  <NavLink to={"/home"}>
+                    <i role="img" aria-label="🐀">
+                      🐀
+                    </i>
+                    Krisa
+                  </NavLink>
                 </MenuListItem>
                 <MenuListItem>
-                  <i role="img" aria-label="🏯">
-                    🏯
-                  </i>
-                  Lair
+                  <NavLink to={"/lair"}>
+                    <i role="img" aria-label="🏯">
+                      🏯
+                    </i>
+                    Lair
+                  </NavLink>
                 </MenuListItem>
                 <Separator />
                 <MenuListItem disabled>
