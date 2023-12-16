@@ -9,35 +9,26 @@ import {
   Toolbar,
 } from "react95";
 import { NavLink } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 const AppBarKrisa = (): React.ReactElement => {
   const [open, setOpen] = useState(false);
 
   return (
-    <AppBar>
-      <Toolbar style={{ justifyContent: "space-between", height: "68px" }}>
-        <div style={{ position: "relative", display: "inline-block" }}>
-          <Button
-            onClick={() => setOpen(!open)}
-            active={open}
-            style={{ fontWeight: "bold", width: "150px", fontSize: "1.5rem" }}
-          >
-            <img
-              src="./krisaLogo.png"
-              alt="Krisa logo"
-              style={{ height: "20px", marginRight: 4 }}
-            />
-            Start
-          </Button>
-          {open && (
-            <MenuList
-              style={{
-                position: "absolute",
-                left: "0",
-                top: "100%",
-                width: "150px",
-              }}
-              onClick={() => setOpen(false)}
+    <>
+      <ToastContainer style={{ position: "fixed" }} />
+      <AppBar>
+        <Toolbar
+          style={{
+            justifyContent: "space-between",
+            height: "68px",
+          }}
+        >
+          <div style={{ position: "relative", display: "inline-block" }}>
+            <Button
+              onClick={() => setOpen(!open)}
+              active={open}
+              style={{ fontWeight: "bold", width: "150px", fontSize: "1.5rem" }}
             >
               <NavLink to={"/home"}>
                 <MenuListItem style={{ fontSize: "1.5rem" }}>
@@ -66,9 +57,17 @@ const AppBarKrisa = (): React.ReactElement => {
           )}
         </div>
 
-        <TextInput placeholder="Search..." width={150} />
-      </Toolbar>
-    </AppBar>
+          <TextInput
+            placeholder="Search..."
+            width={150}
+            required
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+          />
+        </Toolbar>
+      </AppBar>
+    </>
   );
 };
 
