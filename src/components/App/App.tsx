@@ -8,15 +8,17 @@ import NotFound from "../../pages/NotFound/NotFound.js";
 
 const App = (): React.ReactElement => {
   return (
-    <AppStyled>
+    <>
       <AppBarKrisa />
-      <Routes>
-        <Route path="/" element={<Navigate to={"/home"} />}></Route>
-        <Route path="/home" element={<Homepage />} />
-        <Route path="/lair" element={<KrisaLairPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </AppStyled>
+      <AppStyled>
+        <Routes>
+          <Route path="/" element={<Navigate to={"/home"} />}></Route>
+          <Route path="/home" element={<Homepage />} />
+          <Route path="/lair" element={<KrisaLairPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </AppStyled>
+    </>
   );
 };
 

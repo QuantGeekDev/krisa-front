@@ -10,6 +10,7 @@ const KrisaLairPage = (): React.ReactElement => {
   useEffect(() => {
     (async () => {
       const krisas = await getKrisas();
+
       setKrisas(krisas);
     })();
   }, [getKrisas]);
