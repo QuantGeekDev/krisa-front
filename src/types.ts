@@ -4,5 +4,5 @@ export interface KrisaStructure {
 }
 
 export interface KrisaFromDb extends KrisaStructure {
-  krisaId: string;
+  _id: string;
 }
