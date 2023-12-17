@@ -11,7 +11,7 @@ describe("Given an App component", () => {
 
       const expectedLairTitle = "Krisa Lair";
 
-      const getTheMiskaButton = "Get the miska now xD";
+      const getTheMiskaButton = "ENTER THE KRISA LAIR";
 
       customRenderWithMemoryRouter(<App />, ["/home"]);
 
