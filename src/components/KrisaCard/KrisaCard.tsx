@@ -19,6 +19,7 @@ const KrisaCard = ({
         width="330"
         src={imageUrl}
         alt="1"
+        onKeyDown={() => toast.success("That's a lovely krisa! Yes!")}
         onClick={() => toast.success("That's a lovely krisa! Yes!")}
       />
       <h2 className="krisa__id"> {krisaNumber}</h2>
