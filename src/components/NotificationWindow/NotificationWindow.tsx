@@ -9,12 +9,12 @@ const NotificationWindow = (): React.ReactElement => {
     <NotificationWindowStyled>
       <Window>
         <WindowHeader className="window__header">
-          New Krisa just dropped
+          Welcome to the land of the krisa!
         </WindowHeader>
         <WindowContent>
           <p>
-            Please welcome the latest krisa in the rat pack{" "}
-            <span className="window__bold">CRAZY KRISA</span>.
+            BEWARE OF DANGERS when entering the rat lair.{" "}
+            <span className="window__bold">ENTER AT YOUR OWN RISK</span>.
           </p>
           <Button
             onClick={() => {
@@ -22,7 +22,7 @@ const NotificationWindow = (): React.ReactElement => {
             }}
           >
             <span>
-              Get the <span className="window__bold"> miska </span> now xD
+              ENTER THE <span className="window__bold"> KRISA LAIR </span>
             </span>
           </Button>
         </WindowContent>

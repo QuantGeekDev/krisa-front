@@ -1,10 +1,14 @@
-import { krisaMockList } from "../../mocks/KrisaMocks/KrisaMocks";
+import { KrisaFromDb } from "../../types";
 import KrisaCard from "../KrisaCard/KrisaCard";
 
-const KrisaList = (): React.ReactElement => {
+interface KrisaListProps {
+  krisas: KrisaFromDb[];
+}
+
+const KrisaList = ({ krisas }: KrisaListProps): React.ReactElement => {
   return (
     <ul className="krisa-list">
-      {krisaMockList.map((krisa) => (
+      {krisas.map((krisa) => (
         <li key={krisa.krisaNumber} className="krisa">
           <KrisaCard krisa={krisa} />
         </li>

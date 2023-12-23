@@ -18,7 +18,7 @@ const AppBarKrisa = (): React.ReactElement => {
     <>
       {" "}
       <ToastContainer />
-      <AppBar>
+      <AppBar style={{ position: "relative" }}>
         <Toolbar style={{ justifyContent: "space-between", height: "68px" }}>
           <div style={{ position: "relative", display: "inline-block" }}>
             <Button

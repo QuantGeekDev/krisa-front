@@ -14,6 +14,7 @@ const KrisaCardStyled = styled.article`
     &__image {
       height: 330px;
       width: 330px;
+      border: solid #fff 3px;
     }
   }
 `;
