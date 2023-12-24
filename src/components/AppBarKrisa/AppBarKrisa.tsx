@@ -44,7 +44,7 @@ const AppBarKrisa = (): React.ReactElement => {
                 onClick={() => setOpen(false)}
               >
                 <NavLink to={"/home"}>
-                  <MenuListItem style={{ fontSize: "1.5rem" }}>
+                  <MenuListItem style={{ fontSize: "1.35rem" }}>
                     <i role="img" aria-label="🐀">
                       🐀
                     </i>
@@ -52,11 +52,19 @@ const AppBarKrisa = (): React.ReactElement => {
                   </MenuListItem>
                 </NavLink>
                 <NavLink to={"/lair"}>
-                  <MenuListItem style={{ fontSize: "1.5rem" }}>
+                  <MenuListItem style={{ fontSize: "1.35rem" }}>
                     <i role="img" aria-label="🏯">
                       🏯
                     </i>
                     Lair
+                  </MenuListItem>
+                </NavLink>
+                <NavLink to={"/lootbox"}>
+                  <MenuListItem style={{ fontSize: "1.35rem" }}>
+                    <i role="img" aria-label="🎰">
+                      🎰
+                    </i>
+                    Lootbox
                   </MenuListItem>
                 </NavLink>
                 <Separator />
