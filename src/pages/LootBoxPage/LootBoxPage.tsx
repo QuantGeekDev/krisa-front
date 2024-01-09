@@ -1,8 +1,14 @@
+import Lootbox from "../../components/Lootbox/Lootbox";
+import LootboxPageStyled from "./LootboxPageStyled";
+
 const LootBoxPage = (): React.ReactElement => {
   return (
-    <section className="loot-box-page">
-      <h1 className="loot-box-page__title">Lootbox</h1>
-    </section>
+    <LootboxPageStyled className="lootbox-page">
+      <h1 className="lootbox-page__title">Lootbox</h1>
+      <div>
+        <Lootbox />
+      </div>
+    </LootboxPageStyled>
   );
 };
 

@@ -36,7 +36,7 @@ const emperor: TarotRat = {
 const hierophant: TarotRat = {
   name: "The Hierophant",
   imageUrl:
-    "https://res.cloudinary.com/derffxqir/image/upload/v1704760008/tarotRAts/sorzys2sqjlajwllygn3.png",
+    "https://res.cloudinary.com/derffxqir/image/upload/v1704762150/tarotRAts/g3mfryrxipgeuiruwxix.png",
 };
 
 const lovers: TarotRat = {
