@@ -21,7 +21,7 @@ const LootboxStyled = styled.div`
   flex-direction: column;
   align-items: center;
   color: #fff;
-  max-width: 100vw;
+  max-width: 500px;
 
   .lootbox {
     &__roll-button {

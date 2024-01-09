@@ -6,51 +6,30 @@ import { useEffect, useRef } from "react";
 interface CarouselProps {
   krisas: KrisaFromDb[];
   rolling: boolean;
-  selectedIndex: number | null;
 }
 
-const Carousel = ({ krisas, rolling, selectedIndex }: CarouselProps) => {
+const Carousel = ({ krisas, rolling }: CarouselProps) => {
   const listRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    if (rolling && selectedIndex !== null && listRef.current) {
+    if (rolling && listRef.current) {
+      const winningCardPosition = krisas.length / 2; // Middle of the array
       const selectedElement = listRef.current.children[
-        selectedIndex
+        winningCardPosition
       ] as HTMLElement;
-      const offset = selectedElement.offsetLeft;
-      const carouselWidth = listRef.current.offsetWidth;
-
-      // Calculate the position to end the animation
-      const endPosition =
-        -offset + carouselWidth / 2 - selectedElement.offsetWidth / 2;
-      listRef.current.style.animation = `rollToSelected 5s ease-out forwards`;
-
-      // Create a keyframe animation dynamically
-      const keyframes = `
-      @keyframes rollToSelected {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(${endPosition}px);
-        }
-      }
-    `;
-
-      // Append the keyframes to the document
-      const styleSheet = document.createElement("style");
-      styleSheet.type = "text/css";
-      styleSheet.innerText = keyframes;
-      document.head.appendChild(styleSheet);
+      const animationDuration = 6; // Slowed down animation
+      listRef.current.style.transition = `transform ${animationDuration}s ease-out`;
+      const offset = -selectedElement.offsetLeft;
+      listRef.current.style.transform = `translateX(${offset}px)`;
     }
-  }, [rolling, selectedIndex]);
+  }, [rolling, krisas.length]);
 
   return (
     <CarouselStyled className="carousel" rolling={rolling}>
       <div className="carousel__viewport">
         <ul className="carousel__list" ref={listRef}>
-          {krisas.map((krisa) => (
-            <KrisaCard key={krisa._id} krisa={krisa} />
+          {krisas.map((krisa, index) => (
+            <KrisaCard key={`${krisa._id}-${index}`} krisa={krisa} />
           ))}
         </ul>
       </div>

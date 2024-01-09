@@ -16,66 +16,30 @@ const Lootbox = (): React.ReactElement => {
       const krisasFromApi = await getKrisas();
       setKrisas(krisasFromApi);
     })();
-  }, [getKrisas]);
+  }, []);
 
   const handleRoll = (): void => {
-    const rollingTimeMs = 5000;
     const randomIndex = Math.floor(Math.random() * krisas.length);
     setSelectedIndex(randomIndex);
     setRolling(true);
 
     setTimeout(() => {
       setRolling(false);
-    }, rollingTimeMs);
-  };
-
-  const shuffleAndMultiplyKrisas = (krisas: KrisaFromDb[]): KrisaFromDb[] => {
-    const mutiplierAmount = 5;
-    const shuffle = (array: KrisaFromDb[]) => {
-      let currentIndex = array.length,
-        randomIndex;
-
-      while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        [array[currentIndex], array[randomIndex]] = [
-          array[randomIndex],
-          array[currentIndex],
-        ];
-      }
-
-      return array;
-    };
-
-    const shuffledKrisas = shuffle([...krisas]);
-
-    let extendedKrisas: KrisaFromDb[] = [];
-    for (
-      let multiplicationCount = 1;
-      multiplicationCount < mutiplierAmount;
-      multiplicationCount++
-    ) {
-      extendedKrisas = extendedKrisas.concat(shuffledKrisas);
-    }
-
-    return extendedKrisas;
+    }, 6000); // Animation time (5s) + 1s pause on the last card
   };
 
   return (
     <LootboxStyled className="lootbox">
       {rolling ? (
-        <div className="lootbox__viewport">
-          <Carousel
-            selectedIndex={selectedIndex}
-            krisas={shuffleAndMultiplyKrisas(krisas)}
-            rolling={rolling}
-          />
-        </div>
+        <Carousel
+          krisas={krisas}
+          rolling={rolling}
+          selectedIndex={selectedIndex}
+        />
       ) : (
         <>
           <div className="krisas-container">
-            {selectedIndex != null ? (
+            {selectedIndex != null && !rolling ? (
               <div className="lootbox__victory">
                 <span className="lootbox__victory-message">{`Selected Krisa: #${krisas[selectedIndex].krisaNumber}`}</span>
                 <KrisaCard krisa={krisas[selectedIndex]} />
