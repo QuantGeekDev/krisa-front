@@ -59,12 +59,12 @@ const AppBarKrisa = (): React.ReactElement => {
                     Lair
                   </MenuListItem>
                 </NavLink>
-                <NavLink to={"/lootbox"}>
+                <NavLink to={"/tarot"}>
                   <MenuListItem style={{ fontSize: "1.35rem" }}>
-                    <i role="img" aria-label="🎰">
-                      🎰
+                    <i role="img" aria-label="🃏">
+                      🃏
                     </i>
-                    Lootbox
+                    Tarot
                   </MenuListItem>
                 </NavLink>
                 <Separator />
