@@ -12,7 +12,7 @@ const Tarot = ({ tarotRats }: TarotProps): React.ReactElement => {
 
   useEffect(() => {
     setSelectedRat(getRandomCard(tarotRats));
-  }, []);
+  }, [tarotRats]);
 
   const getRandomCard = (tarotRats: TarotRat[]) => {
     const totalRats = tarotRats.length;
