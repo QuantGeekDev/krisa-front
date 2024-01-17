@@ -67,14 +67,6 @@ const AppBarKrisa = (): React.ReactElement => {
                     Tarot
                   </MenuListItem>
                 </NavLink>
-                <NavLink to={"/lootbox"}>
-                  <MenuListItem style={{ fontSize: "1.35rem" }}>
-                    <i role="img" aria-label="🎰">
-                      🎰
-                    </i>
-                    Lootbox
-                  </MenuListItem>
-                </NavLink>
                 <Separator />
                 <MenuListItem disabled>
                   <span role="img" aria-label="🔙">
